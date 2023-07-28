@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "nbc-week3-project",
+    name: "Recruitment-Menu-Project",
     targets: [
         .executableTarget(
             name: "main",
