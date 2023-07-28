@@ -79,8 +79,8 @@ class RecruitmentMenu: MainMenu {
     func showDetailMenu(total: Int, account: Int) {
         if account >= total {
             isExcessSalary = false
-            print("[1]. 채용하기")
-            print("[2]. 불합격 통보하기")
+            print(" [1]. 채용하기")
+            print(" [2]. 불합격 통보하기")
         } else {
             isExcessSalary = true
             print(" [1]. 협상하기")

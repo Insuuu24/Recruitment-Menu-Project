@@ -58,7 +58,7 @@ class DeveloperMenu: MainMenu {
         case 1:
             manager.add(developer: developer)
         default:
-            print(" 번호를 다시 입력해주세요.")
+            print("번호를 다시 입력해주세요.")
             sleep(2)
             showDetailPage(index: manager.getList().firstIndex(where: { $0.name == developer.name }) ?? 0, manager: manager)
         }

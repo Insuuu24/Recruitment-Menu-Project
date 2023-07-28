@@ -25,7 +25,7 @@ class CompanyInformationMenu: MainMenu {
             return
         case 1:
             divider()
-            print(" 회사 자금은 \(myAssetManager.getAccount()) 원 입니다.")
+            print("회사 자금은 \(myAssetManager.getAccount()) 원 입니다.")
             sleep(2)
         default:
             return

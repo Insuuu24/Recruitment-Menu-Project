@@ -26,7 +26,7 @@ class InterviewerManager: Manager {
     
     func add(developer: Developer) {
         if developer.isInterviewed {
-            print(" \(developer.name) 님은 면접자 명단에 있습니다.")
+            print("\(developer.name) 님은 면접자 명단에 있습니다.")
             sleep(2)
         } else {
             developer.isInterviewed = true
@@ -38,12 +38,12 @@ class InterviewerManager: Manager {
     
     func remove(interviewer: Developer) {
         if let index = interviewerList.firstIndex(where: { $0.name == interviewer.name }) {
-            interviewer.isInterviewed = false
+            //interviewer.isInterviewed = false
             interviewerList.remove(at: index)
-            print(" \(interviewer.name) 님에게 불합격을 통보합니다.")
+            print("\(interviewer.name) 님에게 불합격을 통보합니다.")
             sleep(2)
         } else {
-            print(" \(interviewer.name) 님은 면접자 명단에 없습니다.")
+            print("\(interviewer.name) 님은 면접자 명단에 없습니다.")
             sleep(2)
         }
     }
