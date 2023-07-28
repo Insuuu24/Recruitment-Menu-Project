@@ -22,6 +22,6 @@ class MyAssetManager {
      */
     func pay(salary: Int) {
         account -= salary
-        print(" \(salary) 원을 지불하셨습니다. 감사합니다.")
+        print("\(salary) 원을 지불하셨습니다. 감사합니다.")
     }
 }

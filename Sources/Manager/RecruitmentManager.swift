@@ -45,12 +45,12 @@ final class RecruitmentManager: Manager {
     /// 입력받은 개발자를 합격자 명단에 추가한다.
     func add(developer: Developer) {
         if developer.isPassed {
-            print(" 이미 합격된 개발자입니다.")
+            print("이미 합격된 개발자입니다.")
             sleep(2)
         } else {
             developer.isPassed = true
             passerList.append(developer)
-            print(" \(developer.name) 님이 합격자 명단에 추가되었습니다.")
+            print("\(developer.name) 님이 합격자 명단에 추가되었습니다.")
             sleep(2)
         }
     }
@@ -67,10 +67,10 @@ final class RecruitmentManager: Manager {
         if let index = passerList.firstIndex(where: { $0.name == developer.name }) {
             developer.isPassed = false
             passerList.remove(at: index)
-            print(" \(developer.name) 님에게 불합격을 통보합니다.")
+            print("\(developer.name) 님에게 불합격을 통보합니다.")
             sleep(2)
         } else {
-            print(" \(developer.name) 님은 합격자 명단에 없습니다.")
+            print("\(developer.name) 님은 합격자 명단에 없습니다.")
             sleep(2)
         }
     }
@@ -79,10 +79,10 @@ final class RecruitmentManager: Manager {
     func remove(passer: Developer) {
         if let index = passerList.firstIndex(where: { $0.name == passer.name }) {
             spacer()
-            print(" \(passer.name) 님을 채용하셨습니다.")
+            print("\(passer.name) 님을 채용하셨습니다.")
             sleep(2)
             spacer()
-            print(" \(passer.name) 님에게 합격 메세지를 보냈습니다.")
+            print("\(passer.name) 님에게 합격 메세지를 보냈습니다.")
             sleep(2)
             spacer()
             passerList.remove(at: index)

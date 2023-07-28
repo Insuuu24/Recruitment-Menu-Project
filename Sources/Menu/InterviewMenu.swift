@@ -18,7 +18,7 @@ class InterviewMenu: MainMenu {
             sleep(2)
         } else {
             divider()
-            print("           [ \(title) 명단 ]")
+            print("                [ \(title) 명단 ]")
             spacer()
             var index = 0
             for developer in manager.getList() {
@@ -57,7 +57,7 @@ class InterviewMenu: MainMenu {
             interviewerManager.remove(interviewer: developer)
             
         default:
-            print(" 번호를 다시 입력해주세요.")
+            print("번호를 다시 입력해주세요.")
             sleep(2)
             showDetailPage(index: interviewerManager.getList().firstIndex(where: { $0.name == developer.name }) ?? 0)
         }

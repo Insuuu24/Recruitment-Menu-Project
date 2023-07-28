@@ -20,7 +20,7 @@ class RecruitmentMenu: MainMenu {
             print("\(title) 목록이 비어있습니다. ")
             sleep(2)
         } else {
-            print("           [ \(title) 명단 ]")
+            print("                [ \(title) 명단 ]")
             spacer()
             var index = 0
             for developer in manager.getList() {
@@ -37,9 +37,9 @@ class RecruitmentMenu: MainMenu {
     /// 합격자 명단의 희망 연봉 총 합 보여주기
     private func showTotalSalary(total salary: Int) {
         spacer()
-        print("            [ Total ]")
+        print("                 [ Total ]")
         spacer()
-        print("전원 채용 시 지출 금액은 \(salary) 원 입니다.")
+        print(" - 전원 채용 시 지출 금액은 \(salary) 원 입니다.")
         showRemainingBalance(total: salary)
         spacer()
     }
@@ -52,7 +52,7 @@ class RecruitmentMenu: MainMenu {
             print(" 현재 회사 자산은 \(account) 원이 있습니다. ")
             print(" 전원 채용 시 \(account - salary) 원이 남습니다.")
         } else {
-            print("\n현재 회사에는 \(account) 원이 있습니다. -> \(salary - account) 원이 부족해서 전원 채용할 수 없습니다.")
+            print("\n - 현재 회사에는 \(account) 원이 있습니다. -> \(salary - account) 원이 부족해서 전원 채용할 수 없습니다.")
         }
     }
     
@@ -65,11 +65,11 @@ class RecruitmentMenu: MainMenu {
         }
         let developer = recruitmentManager.getList()[index - 1]
         divider()
-        print("[ \(developer.name) 님의 상세페이지 ]")
-        print("이름 : \(developer.name)")
-        print("MBTI : \(developer.mbti)")
-        print("기술 스택 : \(developer.techStack)")
-        print("희망 연봉 : \(developer.salary) 원")
+        print("           [ \(developer.name) 님의 상세페이지 ]\n")
+        print(" 이름 : \(developer.name)")
+        print(" MBTI : \(developer.mbti)")
+        print(" 기술 스택 : \(developer.techStack)")
+        print(" 희망 연봉 : \(developer.salary) 원\n")
         setBackMenu()
         showDetailMenu(total: recruitmentManager.getTotalSalary(), account: myAssetManager.getAccount())
         selectDetailMenu(number: getNumber(), developer: developer)
@@ -117,7 +117,7 @@ class RecruitmentMenu: MainMenu {
     /// 협상하기 선택 시 출력하는 안내 메세지
     func printDealMessage(developer: Developer) {
         spacer()
-        print(" \(developer.name) 님의 이메일 : \(developer.email) 으로 협상관련 이메일을 발송하였습니다.")
+        print("\(developer.name) 님의 이메일 : \(developer.email) 으로 협상관련 이메일을 발송하였습니다.")
         spacer()
         sleep(2)
     }
