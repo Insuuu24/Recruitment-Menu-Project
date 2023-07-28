@@ -21,3 +21,5 @@ class Developer {
         self.isPassed = isPassed
     }
 }
+
+
